@@ -1,15 +1,15 @@
-# ZMK Studio build matrix for a SplitKB Aurora Corne with nice!nano v2.
-# Assumes your repo provides the SplitKB Aurora Corne shield names below.
-# If your existing build.yaml uses corne_left/corne_right or another board ID,
-# preserve those identifiers instead.
 ---
 include:
   - board: nice_nano//zmk
     shield: splitkb_aurora_corne_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: '-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n'
     artifact-name: aurora_corne_left_studio
 
   - board: nice_nano//zmk
     shield: splitkb_aurora_corne_right
     artifact-name: aurora_corne_right
+
+  - board: nice_nano//zmk
+    shield: settings_reset
+    artifact-name: nice_nano_settings_reset
