@@ -2,7 +2,7 @@
 # Assumes your repo provides the SplitKB Aurora Corne shield names below.
 # If your existing build.yaml uses corne_left/corne_right or another board ID,
 # preserve those identifiers instead.
---
+---
 include:
   - board: nice_nano//zmk
     shield: splitkb_aurora_corne_left
